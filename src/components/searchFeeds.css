@@ -1,0 +1,13 @@
+
+
+.searchfeed_box{
+    padding-left: 120px;
+}
+.searchfeed_box .video{
+    width: 100px;
+}
+@media screen and (max-width:757px) {
+    .searchfeed_box{
+        padding-left: 90px;
+    }
+}
