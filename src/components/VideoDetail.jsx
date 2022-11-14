@@ -9,7 +9,6 @@ import { Videos } from "./"
 import { fetchFromApi } from "../utils/fetchFromApi"
 
 
-
 function VideoDetail() {
 
   const [videos, setVideos] = useState([]);  // this for left side recomnded videos list
@@ -36,10 +35,13 @@ function VideoDetail() {
       <Stack direction={{ xs: "column", md: "row" }} >
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "80px", pl: "16px" }} >
-            <ReactPlayer width="100%" url={`https://www.youtube.com/watch?v=${id}`} controls />
+
+            <ReactPlayer width="100%" height={"65vh"} url={`https://www.youtube.com/watch?v=${id}`} controls />
+
             <Typography color="#fff" fontSize="32px" sx={{ mt: "12px", color: "red" }} >
               {title}
             </Typography>
+
             <Stack direction="row" justifyContent="space-between" >
               <Link>
                 <Typography fontSize={{ sm: "18px", md: "22px" }} color="#ffffff">
@@ -47,6 +49,7 @@ function VideoDetail() {
                   <CheckCircle sx={{ fontSize: "20px", ml: "4px" }} />
                 </Typography>
               </Link>
+
               <Stack direction="row" gap={3} >
                 <Typography fontSize={{ sm: "18px", md: "22px" }} color="#ffffff" sx={{ opacity: 0.8 }} >
                   {parseInt(viewCount).toLocaleString()} Views
@@ -55,21 +58,20 @@ function VideoDetail() {
                   {parseInt(likeCount).toLocaleString()} Likes
                 </Typography>
               </Stack>
-
             </Stack>
 
           </Box>
 
-         
+
 
         </Box>
 
-         {/* code for left section  */}
+        {/* code for left section  */}
 
-         <Box px={2} py={{ md: 1, xs: 5 }} display="flex" justifyContent="center" >
-            <Videos videos={videos} direction="column"  />
+        <Box px={2} py={{ md: 1, xs: 5 }} display="flex" justifyContent="center" >
+          <Videos videos={videos} direction="column" />
 
-          </Box>
+        </Box>
 
       </Stack>
 

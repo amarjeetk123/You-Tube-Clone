@@ -39,7 +39,7 @@ const ChanelDetail = () => {
 
       <Box p={2} display="flex">
         <Box sx={{ mr: { sm: '100px' } }} />
-        <Videos videos={videos} />
+        <Videos videos={videos}  />
       </Box>
     </Box>
   );
