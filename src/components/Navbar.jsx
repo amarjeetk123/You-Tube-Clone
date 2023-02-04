@@ -2,7 +2,8 @@ import React from 'react'
 import { Stack } from "@mui/material"
 import {Link} from "react-router-dom"
 
-import {logo} from "../utils/constants"
+// import {logo} from "../utils/constants"
+import logo from "../images/logo.png" 
 
 import Searchbar from './Searchbar'
 
