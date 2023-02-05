@@ -5,6 +5,7 @@ import { Box, Stack, Typography } from "@mui/material"
 import { fetchFromApi } from '../utils/fetchFromApi'
 
 import { SideBar , Videos} from "./"
+import "./style.css"
 
 function Feed() {
 
@@ -21,7 +22,7 @@ function Feed() {
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }} >
       <Box sx={{ height: { sx: "auto", md: "92vh" }, borderRight: "1px solid #3d3d3d", px: { sx: 0, md: 2 } }} >
         <SideBar selectedCategory = {selectedCategory}    setSelectedCategory={setSelectedCategory} />
-        <Typography className='copyright' variant='body1' sx={{mt:1.5 , color:"#fff"}}   >
+        <Typography className='copyright'  sx={{mt:1.5 , color:"#fff"}}   >
 
           @CopyRight 2022 A.K
       
@@ -30,12 +31,12 @@ function Feed() {
 
 
 
-      <Box p={2} sx={{overflowY:"auto"  , height:"90vh" , flex:2 }} >
-        <Typography variant='h4' fontWeight="bold"   sx={{color:"#ffffff"}} > {selectedCategory}
-          <span style={{color:"#ff0000"}}> Video </span>
+      <Box  p={2} sx={{overflowY:"auto"  , height:"88vh" , flex:2 }} >
+        <Typography variant='h4' fontWeight="bold"   sx={{color:"#ffffff"}} > 
+        {selectedCategory} <span style={{color:"#ff0000"}}> Video </span>
         </Typography>
 
-        <Videos videos={videos} />
+        <Videos className="abcd" videos={videos} />
         
 
       </Box>
