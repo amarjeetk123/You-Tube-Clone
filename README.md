@@ -8,6 +8,7 @@ Live Link:- [Click Here!](https://amarjeet-tube.vercel.app)
 
 ## Technology Used  🧑
   - ` React JS `
+  - ` Rest API `
   
 ## 👨‍💻 About Developer 👨‍💻
 
